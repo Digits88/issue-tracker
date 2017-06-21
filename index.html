@@ -9,15 +9,51 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <div class="navbar navbar-default navbar-fixed-top">
+  <!-- Top Navbar -->
+  <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
           <h3 class="navbar-brand">Issue Tracker</h3>
         </div>
       </div>
-  </div>    
+  </div>
+
+  <!-- Main Input Form Section -->
+  <div class="container">
+    <div class="jumbotron">
+      <h3>Add New Issue</h3>
+      <form id="issueInputForm">
+        <div class="form-group">
+          <label for="issueDescInput">Description</label>
+          <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue...">
+        </div>
+        <div class="form-group">
+          <label for="issueSeverityInput">Severity</label>
+          <select id="issueSeverityInput" class="form-control">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="issueAssignedToInput">Assigned To</label>
+          <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter Responsible...">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+
+    <div class="col-lg-12">
+      <div id="issueList"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>2017 &copy; shuv1824. All rights reserved</p>
+  </footer>
 
   <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/chance.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
